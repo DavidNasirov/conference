@@ -1,7 +1,7 @@
 package com.testapp.conference.security;
 
-import com.testapp.conference.model.User;
-import com.testapp.conference.repository.UserRepository;
+import com.testapp.conference.core.user.model.User;
+import com.testapp.conference.core.user.port.output.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

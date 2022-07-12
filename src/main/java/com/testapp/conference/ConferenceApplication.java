@@ -1,8 +1,8 @@
 package com.testapp.conference;
 
-import com.testapp.conference.model.User;
-import com.testapp.conference.model.UserRole;
-import com.testapp.conference.service.UserService;
+import com.testapp.conference.core.user.model.User;
+import com.testapp.conference.core.user.model.UserRole;
+import com.testapp.conference.core.user.port.input.UserUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,7 +21,7 @@ public class ConferenceApplication implements CommandLineRunner {
     }
 
     @Autowired
-    private UserService userService;
+    private UserUseCase userUseCase;
 
     //dump admin
     @Override
@@ -34,6 +34,6 @@ public class ConferenceApplication implements CommandLineRunner {
         admin.setEmail("admin@gmail.com");
         admin.setUserRoles(new ArrayList<>(Collections.singletonList(UserRole.ADMIN_ROLE)));
 
-        userService.signUp(admin);
+        userUseCase.signUp(admin);
     }
 }

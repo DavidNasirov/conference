@@ -1,6 +1,6 @@
 package com.testapp.conference.security;
 
-import com.testapp.conference.exception.AuthException;
+import com.testapp.conference.core.user.exception.AuthException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
